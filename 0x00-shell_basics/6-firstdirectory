@@ -1,0 +1,3 @@
+#!/bin/bash
+echo > tmp/my_first_directory
+
