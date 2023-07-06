@@ -1,2 +1,3 @@
 #!/bin/bash
-movie
+telnet towel.blinkenlights.nl
+
