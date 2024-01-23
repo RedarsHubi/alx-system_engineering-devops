@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that installs Nginx server and redirects
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /etc/nginx/html/index.html
+sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.github.com/ permanent;'
+service nginx start
+
