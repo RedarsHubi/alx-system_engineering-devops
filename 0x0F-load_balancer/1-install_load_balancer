@@ -8,7 +8,7 @@ sudo apt-get -y install haproxy
 server_config=\
 "
 frontend redars_front
-        bind *:80
+        bind 0:80
         mode http
         default_backend redars_front
 backend redars_back
