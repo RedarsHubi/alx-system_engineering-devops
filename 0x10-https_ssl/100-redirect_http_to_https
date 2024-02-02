@@ -46,6 +46,7 @@ frontend redars-frontend
         http-request redirect scheme https unless { ssl_fc }
         http-request set-header X-Forwarded-Proto https
         default_backend redars-backend
+        redirect scheme https code 301 if !{ ssl_fc }
 
 backend redars-backend
         balance roundrobin
